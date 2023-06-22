@@ -132,3 +132,85 @@ a, a:link, a:visited, a:focus, a:hover, a:active{
     display: flex;
     align-items: flex-end;
 }
+
+.banner-about {
+    margin-top: 50px;
+    position: relative;
+    height: 223px;
+    border-radius: 30px;
+    background: url(../images/kalen-emsley-Bkci_8qcdvQ-unsplash2.svg) center/cover;
+    margin-bottom: 50px;
+}
+
+.banner-about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+}
+
+.Collapse {
+    color: #FF6060;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+
+
+    button {
+        width: 100%;
+        background-color: #FF6060;
+        color: white;
+        height: 50px;
+        font-size: 24px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        border: none;
+        border-radius: 5px;
+        justify-content: space-between;
+        padding-right: 20px;
+    }
+}
+
+.Collapse-title {
+    background-color: #F6F6F6;
+    padding : 20px;
+    font-size: 18px;
+}
+
+.Collapse-title-text {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+p {
+    margin: 0;
+}
+
+.collapse-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease-out; /* Durée et type de transition souhaités */
+  }
+
+  .collapse-content.expanded {
+    max-height: 200px; /* Réglez la hauteur maximale souhaitée lorsque le collapsible est ouvert */
+  }
+
+  .collapse-content.closed {
+    transition-duration: 0.5s; /* Durée de transition plus courte pour la fermeture */
+  }
+  
+  .collapse-arrow {
+    transition: transform 0.5s ease; /* Durée et type de transition pour l'animation de rotation */
+  }
+  
+  .collapse-arrow.rotated {
+    transform: rotate(180deg); /* Rotation de 180 degrés */
+  }
